@@ -6,13 +6,14 @@ import Axios from "axios";
 
 // const CATEGORIES = [, { name: 'teachers', fields: ['name', 'expertise', 'phone', 'address'] }, { name: 'courses' }, { name: 'products' }];
 // const API_PATH = "http://ec2-54-255-149-72.ap-southeast-1.compute.amazonaws.com/"
-const API_PATH = "http://testmock-env.eba-uudbjrrb.ap-southeast-1.elasticbeanstalk.com/"
+const API_PATH = "http://testmock-env.eba-uudbjrrb.ap-southeast-1.elasticbeanstalk.com/";
+const category = {
+    name: 'cinemas',
+    fields: ['name',  'company', 'address']
+    // fields: ['name',  'company', 'address', 'phone', 'email']
+};
 function App() {
-    const category = {
-        name: 'cinemas',
-        fields: ['name',  'company', 'address']
-        // fields: ['name',  'company', 'address', 'phone', 'email']
-    };
+
     //const [category, setCategory] = useState(CATEGORIES[0]);
     const [list, setList] = useState([]);
     const [totalPages, setTotalPages] = useState(0);
