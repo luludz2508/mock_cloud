@@ -3,7 +3,10 @@ import "./App.css";
 import { useEffect, useState } from "react";
 import CRUD from "./CRUD";
 import Axios from "axios";
+import Amplify, { API } from 'aws-amplify';
+import awsconfig from './aws-exports';
 
+Amplify.configure(awsconfig);
 // const CATEGORIES = [, { name: 'teachers', fields: ['name', 'expertise', 'phone', 'address'] }, { name: 'courses' }, { name: 'products' }];
 // const API_PATH = "http://ec2-54-255-149-72.ap-southeast-1.compute.amazonaws.com/"
 const API_PATH = "http://testmock-env.eba-uudbjrrb.ap-southeast-1.elasticbeanstalk.com/";
